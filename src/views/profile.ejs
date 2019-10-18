@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include _head %>
+        <title>Profile - URL Shortener</title>
+    </head>
+    <body>
+        <% include _navbar %> <% if ((currentUser) && (currentUser.id ===
+        user.id)) { %> <% } %>
+        <h1>Hello, <%= user.username %></h1>
+        <h6>Joined on <%= user.createdAt %></h6>
+        <div>
+            <% include _table_user_urls %>
+        </div>
+    </body>
+</html>

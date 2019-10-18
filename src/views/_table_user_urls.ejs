@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <th>Original URL</th>
+        <th>Shortened URL</th>
+        <th>Total Hits</th>
+        <th>Date created</th>
+    </thead>
+    <tbody>
+        <% customURLs.forEach(({originalURL, shortURLCode,hits,createdAt}) => {
+        %>
+        <tr>
+            <td>
+                <a class="submitted-url" href="/users/<%= originalURL %>">
+                    <%= originalURL %>
+                </a>
+            </td>
+
+            <td>
+                <a href="/u/<%= shortURLCode %>"><%= shortURLCode %></a>
+            </td>
+            <td><%= hits %></td>
+            <td><%= createdAt %></td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>

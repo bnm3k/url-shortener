@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include _head %>
+        <title>URL Shortener</title>
+    </head>
+    <body>
+        <% include _navbar %>
+        <div class="outer">
+            <div class="middle">
+                <div class="inner">
+                    <h1>Sign up</h1>
+                    <% include _flash %>
+                    <form action="/signup" method="post">
+                        <input
+                            name="username"
+                            type="text"
+                            placeholder="Username"
+                            required
+                            autofocus
+                        />
+                        <input
+                            name="password"
+                            type="password"
+                            placeholder="Password"
+                            required
+                        />
+                        <input type="submit" value="Sign up" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+.svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+.button {
+    text-align: center;
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: black;
+}
+
+.button:hover {
+    border-bottom-style: dashed;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.navbar {
+    display: fixed;
+    min-width: 300px;
+    overflow: auto;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    border-width: 0;
+    border-style: solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom-width: 3px;
+    border-bottom-color: white;
+}
+
+.url-box {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    min-width: 400px;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    min-width: 300px;
+    text-align: center;
+    /*whatever width you want*/
+}
+
+.submitted-url {
+    text-decoration: none;
+    color: gray;
+}
+
+.shortened-url {
+    color: greenyellow;
+}
+
+table {
+    margin-left: 30px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1.5em;
+}

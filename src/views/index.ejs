@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include _head %>
+        <title>URL Shortener</title>
+    </head>
+    <body>
+        <% include _navbar %>
+        <div class="outer">
+            <div class="middle">
+                <div class="inner">
+                    <div class="main">
+                        <!-- <% if (isAuthenticated) { %>
+            <p>IS AUTHENTICATED</p>
+            <% } else { %> NOT AUTHENTICATED <% } %> -->
+                        <div class="content">
+                            <h1>URL Shortener!</h1>
+                            <div class>
+                                <form
+                                    action="/url"
+                                    method="post"
+                                >
+                                    <input 
+  
+                                        name="originalURL"
+                                        type="text"
+                                        class="url-box"
+                                        placeholder="Enter full URL ie https://... or http://"
+                                    />
+                                    <% if (isAuthenticated) { %>
+                                    <input
+                                        type="checkbox"
+                                        name="makeCustom"
+                                        value="True"
+                                    />
+                                    Make Custom<br />
+                                    <% } %>
+
+                                    <input type="submit" value="Shorten URL" />
+                                </form>
+                            </div>
+
+                            <% include _flash %>
+
+                            <div>
+                                <% if (URLEntry) { %> Success!<br /><br />
+                           
+                                    <a class="submitted-url"href="<%= URLEntry.originalURL %>"
+                                        ><%= URLEntry.originalURL %></a
+                                    > &rarr;
+
+
+                                    <a class="shortened-url"
+                                        href="<%= `/u/${URLEntry.shortURLCode}` %>"
+                                        ><%= `/u/${URLEntry.shortURLCode}` %></a
+                                    >
+
+                                <% } %>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
